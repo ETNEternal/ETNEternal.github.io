@@ -22,17 +22,32 @@ body {
     border: none; /* Ensure no borders */
 }
 
-.nav-left, .nav-right {
+.nav-left,
+.nav-right {
     display: flex;
 }
 
 .nav-link {
-    margin: 0 10px;
-    transition: transform 0.3s ease;
+    font-family: 'Arial', 'Helvetica', sans-serif; /* Common sans-serif fonts */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 40px; /* Adjust based on your design */
+    text-align: center;
+    text-decoration: none;
+    color: white; /* Assuming the text is white */
+    letter-spacing: -1px; /* Adjust based on spacing in the image */
+    margin: 0 20px;
+    transition: color 0.5s ease, transform 0.5s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .nav-link.pop-out {
     transform: scale(1.2);
+}
+
+.nav-link:hover {
+    color: red;
 }
 
 .nav-button {
@@ -88,14 +103,16 @@ body {
     text-align: center;
 }
 
-.profile-section .profile img {  /* Changed from .profile-section img */
+.profile-section .profile img {
+    /* Changed from .profile-section img */
     margin: 10px;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
 }
 
-.profile-section .profile img:hover {  /* Changed from .profile-section img:hover */
+.profile-section .profile img:hover {
+    /* Changed from .profile-section img:hover */
     scale: 1.1;
 }
 
@@ -129,7 +146,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     overflow-y: auto;
 }
 
@@ -140,7 +157,7 @@ body {
     max-width: 1200px;
     position: relative;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     color: white;
 }
 
@@ -176,7 +193,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     z-index: 1001;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0, 0, 0, 0.8);
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -186,7 +203,7 @@ body {
 }
 
 .close:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .social-links {
@@ -214,7 +231,7 @@ body {
         width: 95%;
         margin: 10% auto;
     }
-    
+
     .modal-banner {
         height: 150px;
     }
@@ -227,7 +244,8 @@ body {
         padding: 10px;
     }
 
-    .nav-left, .nav-right {
+    .nav-left,
+    .nav-right {
         flex-direction: column;
         width: 100%;
     }

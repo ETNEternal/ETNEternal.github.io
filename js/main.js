@@ -34,7 +34,7 @@ async function loadPastEvents() {
         const pastEventFiles = [
             '800x450-2.jpeg',
             '800x450.jpeg',
-            'Eternal.webp'
+            'Eternal.webp',
         ]
 
         // Clear existing content

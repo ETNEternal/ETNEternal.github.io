@@ -63,7 +63,6 @@ body {
 
 .logo {
     height: 70px;
-    margin-right: 10px;
 }
 
 .logo-text {
@@ -73,6 +72,29 @@ body {
 
 #banner-image {
     opacity: 0;
+    width: 100%; /* Ensure the image takes the full width of the banner container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.banner {
+    max-width: 100%; /* Set the maximum width you want */
+    margin: 0 auto; /* Center the banner */
+}
+
+#banner {
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+    padding-top: 33.33%; /* 3:1 aspect ratio */
+}
+
+#banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
 }
 
 .profile-section {

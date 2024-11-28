@@ -85,7 +85,7 @@ var modal = document.getElementById('imageModal')
 
 // Get the image and insert it inside the modal
 var modalImg = document.getElementById('modalImage')
-var images = document.querySelectorAll('.our-clubs im, .allied-clubs img')
+var images = document.querySelectorAll('.our-clubs img, .allied-clubs img')
 
 images.forEach(function (image) {
     image.onclick = function () {

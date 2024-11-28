@@ -1,294 +1,302 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /* Reset default margins and paddings */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000000;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000;
 }
 
 .header {
-    background-color: #000;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border: none; /* Ensure no borders */
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: none; /* Ensure no borders */
 }
 
 .nav-left,
 .nav-right {
-    display: flex;
+  display: flex;
 }
 
 .nav-link {
-    font-family: 'Arial', 'Helvetica', sans-serif; /* Common sans-serif fonts */
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 40px; /* Adjust based on your design */
-    text-align: center;
-    text-decoration: none;
-    color: white; /* Assuming the text is white */
-    letter-spacing: -1px; /* Adjust based on spacing in the image */
-    margin: 0 20px;
-    transition: color 0.5s ease, transform 0.5s ease;
-    position: relative;
-    overflow: hidden;
+  font-family: "Amaranth", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 40px; /* Adjust based on your design */
+  text-align: center;
+  text-decoration: none;
+  color: white; /* Assuming the text is white */
+  letter-spacing: -1px; /* Adjust based on spacing in the image */
+  margin: 0 20px;
+  transition: color 0.5s ease, transform 0.5s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .nav-link.pop-out {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .nav-link:hover {
-    color: red;
+  color: red;
 }
 
 .nav-button {
-    height: 35px; /* Adjust the height as needed */
-    cursor: pointer;
+  height: 35px; /* Adjust the height as needed */
+  cursor: pointer;
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
-    margin: 0 25px; /* Adjust margin as needed */
+  display: flex;
+  align-items: center;
+  margin: 0 25px; /* Adjust margin as needed */
 }
 
 .logo {
-    height: 70px;
+  height: 70px;
 }
 
 .logo-text {
-    font-size: 24px;
-    font-weight: bold;
+  font-family: "Amaranth", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 #banner-image {
-    opacity: 0;
-    width: 100%; /* Ensure the image takes the full width of the banner container */
-    height: auto; /* Maintain aspect ratio */
+  opacity: 0;
+  width: 100%; /* Ensure the image takes the full width of the banner container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .banner {
-    max-width: 100%; /* Set the maximum width you want */
-    margin: 0 auto; /* Center the banner */
+  max-width: 100%; /* Set the maximum width you want */
+  margin: 0 auto; /* Center the banner */
 }
 
 #banner {
-    width: 80%;
-    position: relative;
-    overflow: hidden;
-    padding-top: 33.33%; /* 3:1 aspect ratio */
+  width: 80%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 33.33%; /* 3:1 aspect ratio */
 }
 
 #banner img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
 }
 
 .profile-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1300px;
-    background-color: #262626;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1300px;
+  background-color: #262626;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .profile-section h2 {
-    font-size: 90px;
-    margin-bottom: 10px;
-    color: #ff1500;
+  font-family: "Amaranth", sans-serif;
+  font-size: 90px;
+  margin-bottom: 10px;
+  color: #ff1500;
 }
 
 .profile-section h3 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #ffffff;
+  font-family: "Amaranth", sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .profile-section .profile {
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
 }
 
 .profile-section .profile img {
-    /* Changed from .profile-section img */
-    margin: 10px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
+  /* Changed from .profile-section img */
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
 .profile-section .profile img:hover {
-    /* Changed from .profile-section img:hover */
-    scale: 1.1;
+  /* Changed from .profile-section img:hover */
+  scale: 1.1;
 }
 
 .profile-section a {
-    display: block;
-    margin-top: 10px;
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .profile-section a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+  font-family: "Amaranth", sans-serif;
 }
 
 /* Modal Styles */
 .profile-img {
-    cursor: pointer;
-    transition: transform 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .profile-img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow-y: auto;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-y: auto;
 }
 
 .modal-content {
-    background-color: #1a1a1a;
-    margin: 5% auto;
-    width: 100%;
-    max-width: 1200px;
-    position: relative;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    color: white;
+  background-color: #1a1a1a;
+  margin: 5% auto;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 .modal-banner {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 
 .modal-body {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .modal-body h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
+  font-family: "Amaranth", sans-serif;
+  font-size: 40px;
+  margin-bottom: 10px;
 }
 
 .modal-body p {
-    font-size: 30px;
-    color: #cccccc;
-    margin-bottom: 20px;
+  font-family: "Amaranth", sans-serif;
+  font-size: 30px;
+  color: #cccccc;
+  margin-bottom: 20px;
 }
 
 .close {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    color: white;
-    font-size: 100px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 1001;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  color: white;
+  font-size: 100px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .close:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .social-link img {
-    width: 100px;
-    height: 100px;
-    transition: transform 0.3s ease;
-    background-color: white;
-    border-radius: 50%; /* Remove border radius from social icons */
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease;
+  background-color: white;
+  border-radius: 50%; /* Remove border radius from social icons */
 }
 
 .social-link:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .modal-content {
-        width: 95%;
-        margin: 10% auto;
-    }
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+  }
 
-    .modal-banner {
-        height: 150px;
-    }
+  .modal-banner {
+    height: 150px;
+  }
 }
 
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
 
-    .nav-left,
-    .nav-right {
-        flex-direction: column;
-        width: 100%;
-    }
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    width: 100%;
+  }
 
-    .nav-link {
-        margin: 5px 0;
-        width: 100%;
-        text-align: center;
-    }
+  .nav-link {
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+  }
 
-    .logo-container {
-        margin: 10px 0;
-        width: 100%;
-        justify-content: center;
-    }
+  .logo-container {
+    margin: 10px 0;
+    width: 100%;
+    justify-content: center;
+  }
 
-    .logo {
-        height: 50px; /* Adjust the height as needed */
-    }
+  .logo {
+    height: 50px; /* Adjust the height as needed */
+  }
 
-    .logo-text {
-        font-size: 20px;
-    }
+  .logo-text {
+    font-size: 20px;
+  }
 }

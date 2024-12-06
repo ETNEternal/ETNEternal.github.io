@@ -125,14 +125,15 @@ body {
 }
 
 .profile-section .profile {
-  display: inline-block;
-  margin: 20px;
-  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .profile-section .profile img {
   /* Changed from .profile-section img */
-  margin: 10px;
+  margin: 20px;
+  margin-left: 150px; /* Space between image and text */
+  margin-right: 100px; /* Space between image and text */
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
@@ -141,6 +142,39 @@ body {
 .profile-section .profile img:hover {
   /* Changed from .profile-section img:hover */
   scale: 1.1;
+}
+
+.profile-text {
+  margin-right: 20px; /* Space between text and image */
+  text-align: right; /* Align text to the right for better layout */
+  flex: 1; /* Ensure text takes up remaining space */
+  margin: auto;
+}
+
+.profile-text h3 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #ff0000;
+  text-align: left;
+}
+
+.profile-text p {
+  font-family: "Amaranth", sans-serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.profile-text ul {
+  font-family: "Amaranth", sans-serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  list-style-position: inside; /* Ensure list dots are inside the container */
+  padding: 0; /* Remove default padding */
+  text-align: left;
 }
 
 .profile-section a {
@@ -191,7 +225,7 @@ body {
 
 .modal-banner {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }

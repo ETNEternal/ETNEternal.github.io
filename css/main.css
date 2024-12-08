@@ -447,6 +447,59 @@
     transform: scale(1.1);
   }
 
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #511114; /* Black background */
+    color: #fff; /* White text */
+    padding: 20px 40px;
+  }
+
+  .footer-section {
+    flex: 1;
+    margin: 0px;
+    text-align: center; /* Center text within the footer section */
+  }
+
+  .logo-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-logo {
+    width: 200px; /* Adjust logo size */
+  }
+
+  .footer-section h4 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Center the list */
+  }
+
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+
+  .footer-section ul li a:hover {
+    color: #ff0000; /* Highlight color on hover */
+  }
+
   .social-icons {
     display: flex;
     gap: 10px;

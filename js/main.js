@@ -19,25 +19,55 @@ window.addEventListener("load", () => {
   }
 });
 
-var modal = document.getElementById("imageModal");
+// Footer appear //
+document.addEventListener("mousemove", (event) => {
+  const footer = document.querySelector(".custom-footer");
+  const threshold = 250; // Pixels from the bottom of the viewport to trigger visibility
+  const scrollThreshold = 0.9; // 90% scroll height to switch footer to static
+  const scrollPosition = window.scrollY + window.innerHeight;
+  const totalHeight = document.body.offsetHeight;
 
-// Get the image and insert it inside the modal
-var modalImg = document.getElementById("modalImage");
-var images = document.querySelectorAll(".our-clubs img, .allied-clubs img");
+  if (!footer) return;
 
-images.forEach(function (image) {
-  image.onclick = function () {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-  };
+  // Check if user is near the bottom of the page
+  const isNearBottom = scrollPosition / totalHeight >= scrollThreshold;
+
+  if (isNearBottom) {
+    // Prevent rapid toggling by setting only if not already static
+    if (footer.style.position !== "static") {
+      footer.style.position = "static";
+      footer.classList.remove("visible"); // No animation for static
+    }
+  } else {
+    // Prevent rapid toggling by setting only if not already fixed
+    if (footer.style.position !== "fixed") {
+      footer.style.position = "fixed";
+    }
+
+    // Handle visibility when footer is fixed
+    const distanceFromBottom = window.innerHeight - event.clientY;
+
+    if (distanceFromBottom < threshold) {
+      footer.classList.add("visible");
+    } else {
+      footer.classList.remove("visible");
+    }
+  }
 });
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+// Header Appear //
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
-// Call setup after page loads
-window.addEventListener("load", setupModal);
+document.addEventListener("mousemove", (event) => {
+  const header = document.querySelector(".header");
+
+  if (!header) return;
+
+  const threshold = 100; // Pixels from the top to trigger visibility
+  const distanceFromTop = event.clientY;
+
+  if (distanceFromTop < threshold) {
+    header.classList.add("visible");
+  } else {
+    header.classList.remove("visible");
+  }
+});

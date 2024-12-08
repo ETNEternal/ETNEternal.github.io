@@ -22,6 +22,20 @@
     align-items: center;
     padding: 10px 20px;
     border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%); /* Hidden by default */
+    transition: transform 0.4s ease-in-out, visibility 0s linear 0.4s; /* Smooth animation */
+    z-index: 9999;
+    visibility: hidden; /* Initially hidden */
+  }
+
+  .header.visible {
+    transform: translateY(0); /* Slide down when visible */
+    visibility: visible; /* Make it visible */
+    transition: transform 0.7s ease-in-out, visibility 0s linear 0s; /* Remove delay for showing */
   }
 
   .header .nav-left,
@@ -448,11 +462,26 @@
   }
 
   .custom-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%); /* Default: hidden */
+    transition: transform 0.3s ease-in-out; /* Faster transition for smoother animation */
     background-color: #420c0c; /* Dark background */
-    color: #fff; /* White text */
-    padding: 20px 40px;
+    color: white;
+    padding: 10px;
     text-align: center;
-    font-family: Arial, sans-serif;
+    z-index: 9999;
+  }
+
+  .custom-footer.visible {
+    transform: translateY(0); /* Slide up when visible */
+  }
+
+  .custom-footer[style="position: static;"] {
+    transform: none; /* Remove any transition effects */
+    visibility: visible; /* Ensure it stays visible */
   }
 
   .social-icons {

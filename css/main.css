@@ -447,72 +447,73 @@
     transform: scale(1.1);
   }
 
-  .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: #511114; /* Black background */
+  .custom-footer {
+    background-color: #420c0c; /* Dark background */
     color: #fff; /* White text */
     padding: 20px 40px;
-  }
-
-  .footer-section {
-    flex: 1;
-    margin: 0px;
-    text-align: center; /* Center text within the footer section */
-  }
-
-  .logo-section {
-    display: flex;
-    justify-content: center;
-  }
-
-  .footer-logo {
-    width: 200px; /* Adjust logo size */
-  }
-
-  .footer-section h4 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    align-items: center;
     text-align: center;
-  }
-
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-    text-align: center; /* Center the list */
-  }
-
-  .footer-section ul li {
-    margin-bottom: 8px;
-  }
-
-  .footer-section ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 14px;
-    transition: color 0.3s;
-  }
-
-  .footer-section ul li a:hover {
-    color: #ff0000; /* Highlight color on hover */
+    font-family: Arial, sans-serif;
   }
 
   .social-icons {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
   }
 
-  .social-icons img {
-    width: 20px;
-    height: 20px;
-    transition: transform 0.3s;
+  .social-icons a {
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s;
   }
 
-  .social-icons img:hover {
-    transform: scale(1.2);
+  .social-icons a:hover {
+    color: #ff0000; /* Highlight color on hover */
+  }
+
+  .footer-divider {
+    border-top: 1px solid #666; /* Divider line */
+    margin: 15px 0;
+  }
+
+  .footer-logo {
+    margin: 15px 0;
+  }
+
+  .footer-logo h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #ffffff; /* Lighter color for footer text */
+  }
+
+  .footer-logo p {
+    font-size: 14px;
+    color: #ffffff; /* Lighter color for copyright text */
+  }
+
+  .footer-logo img {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+  }
+
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover {
+    color: #ff0000; /* Highlight color on hover */
   }
 
   /* Responsive styles */

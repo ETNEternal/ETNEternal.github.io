@@ -314,6 +314,75 @@ body {
   color: #ff0000 !important; /* Change color on hover */
 }
 
+.custom-footer {
+  background-color: #420c0c; /* Dark background */
+  color: #fff; /* White text */
+  padding: 20px 40px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff0000; /* Highlight color on hover */
+}
+
+.footer-divider {
+  border-top: 1px solid #666; /* Divider line */
+  margin: 15px 0;
+}
+
+.footer-logo {
+  margin: 15px 0;
+}
+
+.footer-logo h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #ffffff; /* Lighter color for footer text */
+}
+
+.footer-logo p {
+  font-size: 14px;
+  color: #ffffff; /* Lighter color for copyright text */
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ff0000; /* Highlight color on hover */
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .modal-content {

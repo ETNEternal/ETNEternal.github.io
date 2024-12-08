@@ -18,15 +18,35 @@
     background-color: #000;
     color: #fff;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     padding: 10px 20px;
-    border: none; /* Ensure no borders */
+    border: none;
   }
 
-  .nav-left,
-  .nav-right {
+  .header .nav-left,
+  .header .nav-right {
     display: flex;
+    flex: 1; /* Ensure they take up only necessary space */
+  }
+
+  .header .nav-left {
+    justify-content: flex-end; /* Align left nav to the end */
+    margin-right: 20px; /* Add some space between nav and logo */
+  }
+
+  .header .nav-right {
+    justify-content: flex-start; /* Align right nav to the start */
+    margin-left: 20px; /* Add some space between nav and logo */
+  }
+
+  .header .logo-container {
+    flex: 0; /* Ensure the logo does not grow */
+    text-align: center; /* Center the logo */
+  }
+  .header img {
+    display: block; /* Ensure the image is a block element */
+    margin: 0 auto; /* Center the logo */
   }
 
   .nav-link {
@@ -71,9 +91,7 @@
     font-weight: bold;
   }
 
-  .mission,
-  .events,
-  .clubs {
+  .mission {
     padding: 20px;
     margin: 20px auto;
     max-width: 1300px;
@@ -84,17 +102,13 @@
       color 0.5s ease-in-out;
   }
 
-  .mission:hover,
-  .events:hover,
-  .clubs:hover {
+  .mission:hover {
     transform: scale(1.1);
     background-color: #000000;
     color: #ffffff;
   }
 
-  .mission h2,
-  .events h2,
-  .clubs h2 {
+  .mission h2 {
     font-family: "Amaranth", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -104,15 +118,11 @@
     transition: color 0.3s ease-in-out;
   }
 
-  .mission:hover h2,
-  .events:hover h2,
-  .clubs:hover h2 {
+  .mission:hover h2 {
     color: #ffffff;
   }
 
-  .mission p,
-  .events p,
-  .clubs p {
+  .mission p {
     font-family: "Amaranth", sans-serif;
     margin-bottom: 10px;
     color: #ffffff;
@@ -122,10 +132,27 @@
     transition: color 0.3s ease-in-out;
   }
 
-  .mission:hover p,
-  .events:hover p,
-  .clubs:hover p {
+  .mission:hover p {
     color: #ff0000;
+  }
+
+  .mission h4 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Center the icons vertically */
+  }
+
+  .social-small-icon {
+    color: white; /* Adjust the color as needed */
+    margin: 0 10px; /* Adjust the spacing as needed */
+    font-size: 100px; /* Adjust the size as needed */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .social-small-icon:hover {
+    color: #ff0000; /* Change color on hover */
   }
 
   #banner-image {
@@ -385,8 +412,7 @@
     width: 100%;
   }
 
-  .current-events,
-  .past-events {
+  .current-events {
     margin: 20px;
     padding: 15px;
     background-color: #4c4c4c;
@@ -397,8 +423,7 @@
     text-align: center;
   }
 
-  .current-events h2,
-  .past-events h2 {
+  .current-events h2 {
     font-family: "Amaranth", sans-serif;
     text-transform: uppercase;
     font-size: 30px;
@@ -406,23 +431,35 @@
     margin-bottom: 10px;
   }
 
-  .current-events a,
-  .past-events a {
+  .current-events a {
     display: inline-block;
-    margin: 10px;
+    margin: 15px;
     text-decoration: none;
   }
 
-  .current-events img,
-  .past-events img {
+  .current-events img {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
   }
 
-  .current-events img:hover,
-  .past-events img:hover {
+  .current-events img:hover {
     transform: scale(1.1);
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-icons img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+  }
+
+  .social-icons img:hover {
+    transform: scale(1.2);
   }
 
   /* Responsive styles */

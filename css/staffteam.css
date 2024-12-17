@@ -12,6 +12,7 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: #000000;
+  padding-top: 90px;
 }
 
 .special-text {
@@ -31,16 +32,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  transform: translateY(-100%); /* Hidden by default */
-  transition: transform 0.4s ease-in-out, visibility 0s linear 0.4s; /* Smooth animation */
-  z-index: 9999;
-  visibility: hidden; /* Initially hidden */
-}
-
-.header.visible {
-  transform: translateY(0); /* Slide down when visible */
-  visibility: visible; /* Make it visible */
-  transition: transform 0.7s ease-in-out, visibility 0s linear 0s; /* Remove delay for showing */
+  z-index: 1000;
 }
 
 .header .nav-left,
@@ -329,24 +321,15 @@ body {
 }
 
 .custom-footer {
-  position: fixed;
+  position: relative; /* Change from fixed to relative */
   bottom: 0;
   left: 0;
   right: 0;
-  transform: translateY(100%); /* Default: hidden */
-  transition: transform 0.4s ease-in-out, visibility 0s linear 0.4s; /* Smooth hide with delay */
   background-color: #420c0c; /* Dark background */
   color: white;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
-  z-index: 9999;
-  visibility: hidden; /* Initially hidden */
-}
-
-.custom-footer.visible {
-  transform: translateY(0); /* Slide up when visible */
-  visibility: visible; /* Ensure it's visible */
-  transition: transform 0.7s ease-in-out, visibility 0s linear 0s; /* Remove delay for showing */
+  font-family: "Amaranth", sans-serif;
 }
 
 .social-icons {

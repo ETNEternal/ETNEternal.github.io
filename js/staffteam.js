@@ -74,22 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Footer appear //
-document.addEventListener("mousemove", (event) => {
-  const footer = document.querySelector(".custom-footer");
-
-  if (!footer) return;
-
-  const threshold = 100; // Pixels from the bottom to trigger visibility
-  const distanceFromBottom = window.innerHeight - event.clientY;
-
-  if (distanceFromBottom < threshold) {
-    footer.classList.add("visible");
-  } else {
-    footer.classList.remove("visible");
-  }
-});
-
 // Header Appear //
 
 document.addEventListener("mousemove", (event) => {

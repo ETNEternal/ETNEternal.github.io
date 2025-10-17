@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jersey-2025-drop",
+    "type": "Jersey",
+    "title": "2025 Eternal Jersey Drop",
+    "date": "2025-10-10",
+    "image": "images/announcements/jersey-drop.png",
+    "link": "#",
+    "summary": "Our new jerseys are live. Limited quantities."
+  },
+  {
+    "id": "roster-brawl-fall-qualifiers",
+    "type": "Roster",
+    "title": "Brawl Stars Fall Qualifiers Roster",
+    "date": "2025-09-28",
+    "image": "images/announcements/roster-fall.png",
+    "link": "players-creators.html",
+    "summary": "Meet the squad competing this season."
+  },
+  {
+    "id": "creator-electro-joins",
+    "type": "Creator",
+    "title": "Electro joins as Content Director",
+    "date": "2025-08-15",
+    "image": "images/announcements/electro-joins.png",
+    "link": "people/electro.html",
+    "summary": "Elevating our content game with new leadership."
+  },
+  {
+    "id": "tournament-weekly-series",
+    "type": "Tournament",
+    "title": "Weekly Series Returns",
+    "date": "2025-10-01",
+    "image": "images/announcements/weekly-series.png",
+    "link": "https://discord.com/invite/etneternal",
+    "summary": "Sign up now via Discord."
+  }
+]

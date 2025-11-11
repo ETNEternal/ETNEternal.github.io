@@ -680,45 +680,70 @@
 
   /* Responsive styles */
   @media (max-width: 768px) {
+    body {
+      padding-top: 60px; /* Reduce padding for mobile */
+    }
+
     .header {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px;
-      height: auto; /* Adjust height for smaller screens */
+      padding: 8px 15px;
+      height: auto;
     }
 
-    .nav-left,
-    .nav-right {
-      flex-direction: column;
-      width: 100%;
+    .header .nav-left,
+    .header .nav-right {
+      gap: 12px;
+      padding: 0;
     }
 
-    .nav-link {
-      margin: 5px 0;
-      width: 100%;
-      text-align: center;
+    .header .nav-left {
+      padding-right: 10px;
     }
 
-    .logo-container {
-      margin: 10px 0;
-      width: 100%;
-      justify-content: center;
+    .header .nav-right {
+      padding-left: 10px;
+    }
+
+    .header .logo-container {
+      padding: 0 8px;
     }
 
     .logo {
-      height: 50px; /* Adjust the height as needed */
+      height: 35px; /* Much smaller logo for mobile */
+    }
+
+    .nav-link {
+      font-size: 18px; /* Smaller font size for mobile */
+      margin: 0;
     }
 
     .logo-text {
-      font-size: 20px;
+      font-size: 16px;
+    }
+
+    /* Dropdown adjustments for mobile */
+    .dropdown-toggle .caret {
+      border-top: 4px solid currentColor;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+    }
+
+    .dropdown-menu {
+      min-width: 160px;
+      font-size: 14px;
+    }
+
+    .dropdown-item {
+      padding: 8px 12px;
+      font-size: 14px;
+      gap: 8px;
+    }
+
+    .dropdown-item i {
+      font-size: 16px;
     }
 
     #banner img {
       aspect-ratio: 3 / 1; /* Maintain 3:1 aspect ratio */
-    }
-
-    body {
-      padding-top: auto; /* Adjust padding for smaller screens */
     }
   }
 }

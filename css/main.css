@@ -363,6 +363,13 @@
     text-decoration: underline;
   }
 
+  .profile-section p {
+    font-family: "Amaranth", sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+
   /* Creator / player profile name and role styling */
   .profile-name {
     font-family: "Amaranth", sans-serif;

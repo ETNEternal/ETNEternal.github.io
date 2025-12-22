@@ -54,6 +54,7 @@
     padding: 0 15px;
   }
   .header img {
+    height: 100px;
     display: block;
     margin: 0 auto;
   }
@@ -644,18 +645,13 @@
   }
 
   .footer-logo h3 {
-    font-size: 18px;
+    font-size: 40px;
     margin-bottom: 5px;
-    color: #ffffff; /* Lighter color for footer text */
-  }
-
-  .footer-logo p {
-    font-size: 14px;
-    color: #ffffff; /* Lighter color for copyright text */
+    color: #ffffff;
   }
 
   .footer-logo img {
-    height: 50px;
+    height: 110px;
     margin-bottom: 10px;
   }
 

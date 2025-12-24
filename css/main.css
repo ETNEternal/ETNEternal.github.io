@@ -697,6 +697,9 @@
       gap: 12px;
       padding: 0;
     }
+    .header img {
+      height: 50px;
+    }
 
     .header .nav-left {
       padding-right: 10px;
@@ -711,7 +714,7 @@
     }
 
     .logo {
-      height: 35px; /* Much smaller logo for mobile */
+      height: 20px; /* Much smaller logo for mobile */
     }
 
     .nav-link {

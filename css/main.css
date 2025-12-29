@@ -539,7 +539,8 @@
 
   /* Announcements Grid */
   #announcements-grid,
-  #other-announcements-grid {
+  #other-announcements-grid,
+  #shop-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 20px;
@@ -588,6 +589,9 @@
   .badge-jersey {
     background: #b30000;
   }
+  .badge-product {
+    background: #b3004d;
+  }
   .badge-roster {
     background: #ff6a00;
   }
@@ -611,6 +615,12 @@
     margin-top: 8px;
     color: #e6e6e6;
     font-size: 14px;
+  }
+  .announcement-price {
+    margin-top: 6px;
+    color: #ffd1c7;
+    font-weight: 700;
+    font-size: 15px;
   }
   .announcement-empty {
     color: #e6e6e6;

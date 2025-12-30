@@ -189,7 +189,9 @@ window.addEventListener("load", () => {
       const img = announcementsGrid.querySelector(".jersey-image");
       if (img) {
         img.addEventListener("error", () => {
-          img.src = "images/LogoBackdropFinal.webp";
+          img.src = "images/etn-logo-transparent.png";
+          img.style.objectFit = "contain";
+          img.style.backgroundColor = "#f5f5f5";
         });
       }
     };
@@ -214,7 +216,9 @@ window.addEventListener("load", () => {
           const displayDate = formatDate(item.date);
 
           return `
-            <article class="announcement-card" tabindex="0">
+            <article class="announcement-card announcement-${
+              item.id
+            }" tabindex="0">
               <a href="${
                 item.link
               }" target="_blank" rel="noopener noreferrer" class="announcement-link" aria-label="${
@@ -243,7 +247,9 @@ window.addEventListener("load", () => {
         .querySelectorAll(".announcement-image")
         .forEach((img) => {
           img.addEventListener("error", () => {
-            img.src = "images/LogoBackdropFinal.webp";
+            img.src = "images/etn-logo-transparent.png";
+            img.style.objectFit = "contain";
+            img.style.backgroundColor = "#f5f5f5";
           });
         });
     };

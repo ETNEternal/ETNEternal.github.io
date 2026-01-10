@@ -1,0 +1,63 @@
+{
+  "people": [
+    {
+      "id": "stabby",
+      "name": "Stabby",
+      "role": "Content Creator for Eternal",
+      "image": "https://pbs.twimg.com/profile_images/1612238459598508036/6Vz7PHbO_400x400.jpg",
+      "socials": {
+        "youtube": "https://www.youtube.com/@StabbyDuck",
+        "tiktok": "https://www.tiktok.com/@stabby_duck",
+        "x": "https://x.com/Stabby_Duck",
+        "twitch": "https://www.twitch.tv/stabbyduck"
+      }
+    },
+    {
+      "id": "blacksages",
+      "name": "Blacksages",
+      "role": "Content Creator for Eternal",
+      "image": "https://pbs.twimg.com/profile_images/1649867399418753025/5VjQiLm8_400x400.jpg",
+      "socials": {
+        "x": "https://x.com/blacksages2",
+        "youtube": "https://www.youtube.com/@blacksages2",
+        "twitch": "https://www.twitch.tv/blacksages2"
+      }
+    },
+    {
+      "id": "hunnamills",
+      "name": "Hunna Mills",
+      "role": "Content Creator for Eternal",
+      "image": "https://pbs.twimg.com/profile_images/1487071753083842565/kkOhoaXa_400x400.jpg",
+      "socials": {
+        "youtube": "https://www.youtube.com/@Hunnamills/videos",
+        "instagram": "https://www.instagram.com/hunnamillion/",
+        "tiktok": "https://www.tiktok.com/@hunnamills",
+        "x": "https://x.com/HunnaMills",
+        "twitch": "https://www.twitch.tv/hunnamills"
+      }
+    },
+    {
+      "id": "cl1pzz",
+      "name": "Cl1pZz",
+      "role": "Content Creator for Eternal",
+      "image": "https://yt3.googleusercontent.com/S51Et5V1Bvr7-B3q4nCeYDONzVqET9Oj6FfWA1uyN6TnEMpUoAFDtKDvSOgE_48wph6KjR5m5A=s160-c-k-c0x00ffffff-no-rj",
+      "socials": {
+        "youtube": "https://www.youtube.com/@RealCl1pZz",
+        "tiktok": "https://www.tiktok.com/@cl1pzzbs"
+      }
+    },
+    {
+      "id": "nightarcher",
+      "name": "NightArcher55",
+      "role": "Creator",
+      "image": "https://pbs.twimg.com/profile_images/2003701141926780928/tNsD074w_400x400.jpg",
+      "socials": {
+        "x": "https://x.com/NightArcher55",
+        "youtube": "https://www.youtube.com/@nightarcher55",
+        "twitch": "https://www.twitch.tv/nightarcher55",
+        "instagram": "https://www.instagram.com/nightarcher55/",
+        "discord": "https://discord.gg/xYF5zZ6wwN"
+      }
+    }
+  ]
+}

@@ -274,6 +274,23 @@
     flex-wrap: wrap;
   }
 
+  #leadership-grid .profile {
+    margin: 0;
+    flex: 1 1 420px;
+    max-width: 520px;
+  }
+
+  #leadership-grid .profile a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #leadership-grid .profile-text {
+    text-align: center;
+  }
+
   .social {
     display: flex;
     flex-direction: column;

@@ -74,6 +74,34 @@ const attachHeaderEventListeners = () => {
   }
 };
 
+const toWebpUrl = (url) => {
+  const raw = (url || "").toString().trim();
+  if (!raw) return "";
+  if (/^https?:\/\//i.test(raw)) return "";
+
+  const match = raw.match(/^(.*)\.(png|jpe?g)$/i);
+  if (!match) return "";
+
+  return `${match[1]}.webp`;
+};
+
+const pictureHtml = (src, alt, imgClass) => {
+  const webp = toWebpUrl(src);
+  const safeAlt = (alt || "").toString();
+  const safeClass = (imgClass || "").toString();
+
+  if (!webp) {
+    return `<img src="${src}" alt="${safeAlt}" class="${safeClass}" />`;
+  }
+
+  return `
+    <picture>
+      <source type="image/webp" srcset="${webp}" />
+      <img src="${src}" alt="${safeAlt}" class="${safeClass}" />
+    </picture>
+  `;
+};
+
 // Load header and footer when DOM is ready
 document.addEventListener("DOMContentLoaded", async () => {
   await loadHeader();
@@ -169,9 +197,7 @@ window.addEventListener("load", () => {
         jersey.title
       }">
             <div class="jersey-media">
-              <img src="${jersey.image}" alt="${
-        jersey.title
-      }" class="jersey-image" />
+          ${pictureHtml(jersey.image, jersey.title, "jersey-image")}
             </div>
             <div class="jersey-content">
               <span class="badge badge-jersey">${jersey.type || "Jersey"}</span>
@@ -224,9 +250,7 @@ window.addEventListener("load", () => {
               }" target="_blank" rel="noopener noreferrer" class="announcement-link" aria-label="${
             item.title
           }">
-                <img src="${item.image}" alt="${
-            item.title
-          }" class="announcement-image" />
+                ${pictureHtml(item.image, item.title, "announcement-image")}
                 <div class="announcement-content">
                   <span class="badge ${badgeClass}">${
             item.type || "General"
@@ -306,9 +330,7 @@ window.addEventListener("load", () => {
               }" target="_blank" rel="noopener noreferrer" class="announcement-link" aria-label="${
             item.title
           }">
-                <img src="${item.image}" alt="${
-            item.title
-          }" class="announcement-image" />
+                ${pictureHtml(item.image, item.title, "announcement-image")}
                 <div class="announcement-content">
                   <span class="badge ${badgeClass}">${
             item.type || "Product"
@@ -325,7 +347,9 @@ window.addEventListener("load", () => {
 
       shopGrid.querySelectorAll(".announcement-image").forEach((img) => {
         img.addEventListener("error", () => {
-          img.src = "images/LogoBackdropFinal.webp";
+          img.src = "images/etn-logo-transparent.png";
+          img.style.objectFit = "contain";
+          img.style.backgroundColor = "#f5f5f5";
         });
       });
     };

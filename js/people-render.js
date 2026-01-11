@@ -14,6 +14,31 @@ const escapeHtml = (value) =>
     .replace(/\"/g, "&quot;")
     .replace(/'/g, "&#39;");
 
+const toWebpUrl = (url) => {
+  const raw = (url || "").toString().trim();
+  if (!raw) return "";
+  if (/^https?:\/\//i.test(raw)) return "";
+
+  const match = raw.match(/^(.*)\.(png|jpe?g)$/i);
+  if (!match) return "";
+
+  return `${match[1]}.webp`;
+};
+
+const pictureHtml = (src, alt, imgAttrs = "") => {
+  const webp = toWebpUrl(src);
+  if (!webp) {
+    return `<img src="${src}" alt="${alt}" ${imgAttrs} />`;
+  }
+
+  return `
+    <picture>
+      <source type="image/webp" srcset="${webp}" />
+      <img src="${src}" alt="${alt}" ${imgAttrs} />
+    </picture>
+  `;
+};
+
 const renderCreatorsGrid = async () => {
   const grid = document.getElementById("creators-grid");
   if (!grid) return;
@@ -30,7 +55,7 @@ const renderCreatorsGrid = async () => {
 
         return `
         <div class="profile">
-          <img src="${img}" alt="${name}" width="140" height="140" />
+          ${pictureHtml(img, name, 'width="140" height="140"')}
           <a href="profile.html?user=${id}" class="profile-name">${name}</a>
           <div class="profile-role">Creator</div>
         </div>
@@ -65,7 +90,11 @@ const renderLeadershipTeam = async () => {
         return `
         <div class="profile">
           <a href="profile.html?user=${id}">
-            <img src="${img}" width="180" height="180" class="profile-img" alt="${name}" />
+            ${pictureHtml(
+              img,
+              name,
+              'width="180" height="180" class="profile-img"'
+            )}
             <div class="profile-text">
               <h3>${name}</h3>
               <p>${role}</p>

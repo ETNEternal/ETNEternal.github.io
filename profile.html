@@ -19,12 +19,14 @@
     <div id="header-placeholder"></div>
 
     <section class="banner">
-      <img
-        id="banner-image"
-        src="images/main banner.png"
-        width="100%"
-        height="417px"
-      />
+      <picture>
+        <source type="image/webp" srcset="images/main banner.webp" />
+        <img
+          id="banner-image"
+          src="images/main banner.png"
+          alt="Eternal banner"
+        />
+      </picture>
     </section>
 
     <section class="mission">
@@ -33,9 +35,7 @@
         id="person-image"
         src="images/etn-logo-transparent.png"
         alt="Profile"
-        width="200"
-        height="200"
-        style="border-radius: 50%; margin: 20px auto; display: block"
+        class="profile-avatar"
       />
       <p id="person-role"></p>
       <div id="person-socials" class="social-icons"></div>

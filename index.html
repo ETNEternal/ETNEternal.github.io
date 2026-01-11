@@ -9,17 +9,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     />
-    <link rel="icon" type="image/x-icon" href="images/etn-logo-transparent.png">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/etn-logo-transparent.png"
+    />
   </head>
   <body>
     <div id="header-placeholder"></div>
     <section class="banner">
-      <img
-        id="banner-image"
-        src="images/main banner.png"
-        width="100%"
-        height="417px"
-      />
+      <picture>
+        <source type="image/webp" srcset="images/main banner.webp" />
+        <img
+          id="banner-image"
+          src="images/main banner.png"
+          alt="Eternal banner"
+        />
+      </picture>
     </section>
     <section class="all-events" id="announcements">
       <h1>Jersey Drop</h1>

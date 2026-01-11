@@ -9,56 +9,24 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     />
-    <link rel="icon" type="image/x-icon" href="images/etn-logo-transparent.png">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/etn-logo-transparent.png"
+    />
   </head>
   <body>
-    <header class="header">
-      <nav class="nav-left">
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="players-creators.html" class="nav-link">Players</a>
-      </nav>
-      <div class="logo-container">
-        <a href="index.html" class="nav-link">
-          <img
-            src="images/etn-logo-black.png"
-            class="logo"
-            alt="Eternal Logo"
-          />
-        </a>
-      </div>
-            <nav class="nav-right">
-        <a href="shop.html" class="nav-link" aria-label="Shop">Shop</a>
-        <div class="dropdown" id="socials-dropdown">
-          <a
-            href="#"
-            class="nav-link dropdown-toggle"
-            aria-haspopup="true"
-            aria-expanded="false"
-            aria-controls="socials-menu"
-            >Socials <span class="caret"></span
-          ></a>
-          <div class="dropdown-menu" id="socials-menu" role="menu">
-            <a class="dropdown-item" href="https://discord.com/invite/etneternal" target="_blank" role="menuitem"><i class="fab fa-discord"></i> Discord</a>
-            <a class="dropdown-item" href="https://x.com/etn_eternal" target="_blank" role="menuitem"><i class="fab fa-x-twitter"></i> Twitter</a>
-            <a class="dropdown-item" href="https://instagram.com/etn_eternal" target="_blank" role="menuitem"><i class="fab fa-instagram"></i> Instagram</a>
-            <a
-              class="dropdown-item"
-              href="https://www.youtube.com/@ETN_Eternal"
-              target="_blank"
-              role="menuitem"
-              ><i class="fab fa-youtube"></i> YouTube</a
-            >
-          </div>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
     <section class="banner">
-      <img
-        id="banner-image"
-        src="images/main banner.png"
-        width="100%"
-        height="417px"
-      />
+      <picture>
+        <source type="image/webp" srcset="images/main banner.webp" />
+        <img
+          id="banner-image"
+          src="images/main banner.png"
+          alt="Eternal banner"
+        />
+      </picture>
     </section>
 
     <section class="profile-section">
@@ -67,15 +35,13 @@
         Our competitive rosters across titles. Update this page as rosters
         change.
       </p>
-      <div id="players-grid" class="socials-grid">
-      </div>
+      <div id="players-grid" class="socials-grid"></div>
     </section>
 
     <section class="profile-section">
       <h2>Creators</h2>
       <p>Our creators who entertain and grow the Eternal community.</p>
-      <div id="creators-grid" class="socials-grid">
-      </div>
+      <div id="creators-grid" class="socials-grid"></div>
     </section>
 
     <footer class="custom-footer">
@@ -95,7 +61,10 @@
       </div>
       <div class="footer-divider"></div>
       <div class="footer-logo">
-        <img src="images/etn-logo-transparent.png" alt="Eternal Logo" />
+        <picture>
+          <source type="image/webp" srcset="images/etn-logo-transparent.webp" />
+          <img src="images/etn-logo-transparent.png" alt="Eternal Logo" />
+        </picture>
         <h3>Eternal</h3>
       </div>
       <div class="footer-links"></div>

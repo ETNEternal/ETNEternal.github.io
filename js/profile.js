@@ -35,6 +35,36 @@ const iconForPlatform = (platform) => {
 
 const isExternalUrl = (url) => /^https?:\/\//i.test(url || "");
 
+const toWebpUrl = (url) => {
+  const raw = (url || "").toString().trim();
+  if (!raw) return "";
+  if (isExternalUrl(raw)) return "";
+
+  const match = raw.match(/^(.*)\.(png|jpe?g)$/i);
+  if (!match) return "";
+
+  return `${match[1]}.webp`;
+};
+
+const setOptimizedImgSrc = (imgEl, url) => {
+  if (!imgEl) return;
+
+  const original = (url || "").toString();
+  const webp = toWebpUrl(original);
+
+  if (!webp) {
+    imgEl.src = original;
+    return;
+  }
+
+  imgEl.onerror = () => {
+    imgEl.onerror = null;
+    imgEl.src = original;
+  };
+
+  imgEl.src = webp;
+};
+
 const toAbsoluteAssetUrl = (value) => {
   const url = (value || "").toString().trim();
   if (!url) return url;
@@ -56,8 +86,9 @@ const renderProfile = (person) => {
   if (roleEl) roleEl.textContent = person.role || "";
 
   if (imgEl) {
-    imgEl.src =
+    const resolved =
       toAbsoluteAssetUrl(person.image) || "images/etn-logo-transparent.png";
+    setOptimizedImgSrc(imgEl, resolved);
     imgEl.alt = person.name || "Profile";
   }
 

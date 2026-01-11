@@ -29,10 +29,10 @@
   {
     "id": "tournament-weekly-series",
     "type": "Tournament",
-    "title": "Weekly Series Returns",
+    "title": "Matcherino tournament this week",
     "date": "2025-10-01",
     "image": "images/announcements/weekly-series.png",
-    "link": "https://discord.com/invite/etneternal",
-    "summary": "Sign up now via Discord."
+    "link": "https://matcherino.com/supercell/tournaments/180014/overview",
+    "summary": "Sign up now on Matcherino."
   }
 ]

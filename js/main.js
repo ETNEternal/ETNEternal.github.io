@@ -85,17 +85,30 @@ const toWebpUrl = (url) => {
   return `${match[1]}.webp`;
 };
 
+const toAvifUrl = (url) => {
+  const raw = (url || "").toString().trim();
+  if (!raw) return "";
+  if (/^https?:\/\//i.test(raw)) return "";
+
+  const match = raw.match(/^(.*)\.(png|jpe?g)$/i);
+  if (!match) return "";
+
+  return `${match[1]}.avif`;
+};
+
 const pictureHtml = (src, alt, imgClass) => {
+  const avif = toAvifUrl(src);
   const webp = toWebpUrl(src);
   const safeAlt = (alt || "").toString();
   const safeClass = (imgClass || "").toString();
 
-  if (!webp) {
+  if (!avif && !webp) {
     return `<img src="${src}" alt="${safeAlt}" class="${safeClass}" />`;
   }
 
   return `
     <picture>
+      <source type="image/avif" srcset="${avif}" />
       <source type="image/webp" srcset="${webp}" />
       <img src="${src}" alt="${safeAlt}" class="${safeClass}" />
     </picture>

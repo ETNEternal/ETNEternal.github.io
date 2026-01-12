@@ -46,23 +46,38 @@ const toWebpUrl = (url) => {
   return `${match[1]}.webp`;
 };
 
+const toAvifUrl = (url) => {
+  const raw = (url || "").toString().trim();
+  if (!raw) return "";
+  if (isExternalUrl(raw)) return "";
+
+  const match = raw.match(/^(.*)\.(png|jpe?g)$/i);
+  if (!match) return "";
+
+  return `${match[1]}.avif`;
+};
+
 const setOptimizedImgSrc = (imgEl, url) => {
   if (!imgEl) return;
 
   const original = (url || "").toString();
-  const webp = toWebpUrl(original);
+  const picture = imgEl.closest("picture");
+  const avifSource = picture?.querySelector('source[type="image/avif"]');
+  const webpSource = picture?.querySelector('source[type="image/webp"]');
 
-  if (!webp) {
-    imgEl.src = original;
-    return;
-  }
+  const avif = toAvifUrl(original);
+  const webp = toWebpUrl(original);
 
   imgEl.onerror = () => {
     imgEl.onerror = null;
-    imgEl.src = original;
+    if (avifSource) avifSource.srcset = "";
+    if (webpSource) webpSource.srcset = "";
+    imgEl.src = "images/etn-logo-transparent.png";
   };
 
-  imgEl.src = webp;
+  if (avifSource) avifSource.srcset = avif;
+  if (webpSource) webpSource.srcset = webp;
+  imgEl.src = original;
 };
 
 const toAbsoluteAssetUrl = (value) => {

@@ -1,6 +1,9 @@
-const loadPeopleData = async (path) => {
+const loadPeopleData = async (path, { optional = false } = {}) => {
   const res = await fetch(path, { cache: "no-store" });
-  if (!res.ok) throw new Error(`Failed to load ${path} (${res.status})`);
+  if (!res.ok) {
+    if (optional && res.status === 404) return [];
+    throw new Error(`Failed to load ${path} (${res.status})`);
+  }
   const data = await res.json();
   return Array.isArray(data?.people) ? data.people : [];
 };
@@ -14,7 +17,7 @@ const escapeHtml = (value) =>
     .replace(/\"/g, "&quot;")
     .replace(/'/g, "&#39;");
 
-const toWebpUrl = (url) => {
+const peopleToWebpUrl = (url) => {
   const raw = (url || "").toString().trim();
   if (!raw) return "";
   if (/^https?:\/\//i.test(raw)) return "";
@@ -25,7 +28,7 @@ const toWebpUrl = (url) => {
   return `${match[1]}.webp`;
 };
 
-const toAvifUrl = (url) => {
+const peopleToAvifUrl = (url) => {
   const raw = (url || "").toString().trim();
   if (!raw) return "";
   if (/^https?:\/\//i.test(raw)) return "";
@@ -36,9 +39,9 @@ const toAvifUrl = (url) => {
   return `${match[1]}.avif`;
 };
 
-const pictureHtml = (src, alt, imgAttrs = "") => {
-  const avif = toAvifUrl(src);
-  const webp = toWebpUrl(src);
+const peoplePictureHtml = (src, alt, imgAttrs = "") => {
+  const avif = peopleToAvifUrl(src);
+  const webp = peopleToWebpUrl(src);
   if (!avif && !webp) {
     return `<img src="${src}" alt="${alt}" ${imgAttrs} />`;
   }
@@ -52,13 +55,56 @@ const pictureHtml = (src, alt, imgAttrs = "") => {
   `;
 };
 
+const renderPlayersGrid = async () => {
+  const grid = document.getElementById("players-grid");
+  if (!grid) return;
+
+  try {
+    // Optional file so the page still works even if you haven't added players yet.
+    const players = await loadPeopleData("data/players.json", {
+      optional: true,
+    });
+
+    if (!players.length) {
+      grid.innerHTML = '<p class="announcement-empty">Rosters coming soon.</p>';
+      return;
+    }
+
+    const html = players
+      .map((p) => {
+        const id = encodeURIComponent((p?.id || "").toString());
+        const name = escapeHtml(p?.name || "");
+        const role = escapeHtml(p?.role || "Player");
+        const img = escapeHtml(p?.image || "images/etn-logo-transparent.png");
+
+        return `
+        <div class="profile">
+          ${peoplePictureHtml(img, name, 'width="140" height="140"')}
+          <a href="profile.html?user=${id}" class="profile-name">${name}</a>
+          <div class="profile-role">${role}</div>
+        </div>
+      `;
+      })
+      .join("");
+
+    grid.innerHTML = html;
+  } catch (err) {
+    console.error(err);
+    grid.innerHTML = '<p class="announcement-empty">Rosters coming soon.</p>';
+  }
+};
+
 const renderCreatorsGrid = async () => {
   const grid = document.getElementById("creators-grid");
   if (!grid) return;
 
   try {
     const creators = await loadPeopleData("data/creators.json");
-    if (!creators.length) return;
+    if (!creators.length) {
+      grid.innerHTML =
+        '<p class="announcement-empty">Creators coming soon.</p>';
+      return;
+    }
 
     const html = creators
       .map((p) => {
@@ -68,7 +114,7 @@ const renderCreatorsGrid = async () => {
 
         return `
         <div class="profile">
-          ${pictureHtml(img, name, 'width="140" height="140"')}
+          ${peoplePictureHtml(img, name, 'width="140" height="140"')}
           <a href="profile.html?user=${id}" class="profile-name">${name}</a>
           <div class="profile-role">Creator</div>
         </div>
@@ -103,7 +149,7 @@ const renderLeadershipTeam = async () => {
         return `
         <div class="profile">
           <a href="profile.html?user=${id}">
-            ${pictureHtml(
+            ${peoplePictureHtml(
               img,
               name,
               'width="180" height="180" class="profile-img"'
@@ -138,5 +184,9 @@ const renderLeadershipTeam = async () => {
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
-  await Promise.all([renderCreatorsGrid(), renderLeadershipTeam()]);
+  await Promise.all([
+    renderPlayersGrid(),
+    renderCreatorsGrid(),
+    renderLeadershipTeam(),
+  ]);
 });

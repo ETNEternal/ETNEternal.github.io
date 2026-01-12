@@ -35,7 +35,7 @@ const iconForPlatform = (platform) => {
 
 const isExternalUrl = (url) => /^https?:\/\//i.test(url || "");
 
-const toWebpUrl = (url) => {
+const profileToWebpUrl = (url) => {
   const raw = (url || "").toString().trim();
   if (!raw) return "";
   if (isExternalUrl(raw)) return "";
@@ -46,7 +46,7 @@ const toWebpUrl = (url) => {
   return `${match[1]}.webp`;
 };
 
-const toAvifUrl = (url) => {
+const profileToAvifUrl = (url) => {
   const raw = (url || "").toString().trim();
   if (!raw) return "";
   if (isExternalUrl(raw)) return "";
@@ -65,8 +65,8 @@ const setOptimizedImgSrc = (imgEl, url) => {
   const avifSource = picture?.querySelector('source[type="image/avif"]');
   const webpSource = picture?.querySelector('source[type="image/webp"]');
 
-  const avif = toAvifUrl(original);
-  const webp = toWebpUrl(original);
+  const avif = profileToAvifUrl(original);
+  const webp = profileToWebpUrl(original);
 
   imgEl.onerror = () => {
     imgEl.onerror = null;

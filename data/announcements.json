@@ -1,4 +1,12 @@
-[
+[  {
+    "id": "roster-brawl-stars-2026",
+    "type": "Roster",
+    "title": "Brawl Stars 2026 roster",
+    "date": "2026-01-17",
+    "image": "https://pbs.twimg.com/media/G-4LTAeX0AAO0RU?format=jpg&name=large",
+    "link": "players-creators.html",
+    "summary": "Meet the squad competing this season."
+  },
   {
     "id": "jersey-2026-drop",
     "type": "Jersey",
@@ -7,15 +15,6 @@
     "image": "images/ETN_jersey.png",
     "link": "https://eternal-10105.myshopify.com/",
     "summary": "Our new jerseys are live. Limited quantities."
-  },
-  {
-    "id": "roster-brawl-fall-qualifiers",
-    "type": "Roster",
-    "title": "Brawl Stars 2026 roster",
-    "date": "2025-09-28",
-    "image": "images/etn-logo-transparent.png",
-    "link": "players-creators.html",
-    "summary": "Meet the squad competing this season."
   },
   {
     "id": "creator-electro-joins",

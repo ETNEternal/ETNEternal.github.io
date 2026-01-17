@@ -165,12 +165,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       return Array.isArray(data?.people) ? data.people : [];
     };
 
-    const [creators, staff] = await Promise.all([
+    const [players, creators, staff] = await Promise.all([
+      loadPeople("data/players.json"),
       loadPeople("data/creators.json"),
       loadPeople("data/staff.json"),
     ]);
 
-    const people = [...creators, ...staff];
+    const people = [...players, ...creators, ...staff];
     const match = people.find((p) => normalizeId(p?.id) === id);
 
     if (!match) {

@@ -44,33 +44,6 @@
       "socials": {
         "x": "https://x.com/archerv9_"
       }
-    },
-    {
-      "id": "alchemicalx_bs",
-      "name": "AlchemicalX_BS",
-      "role": "Staff",
-      "image": "https://pbs.twimg.com/profile_images/1836174329970610176/zFf8YQBh_400x400.jpg",
-      "socials": {
-        "x": "https://x.com/AlchemicalX_BS"
-      }
-    },
-    {
-      "id": "iperibs",
-      "name": "iPeriBS",
-      "role": "Staff",
-      "image": "https://pbs.twimg.com/profile_images/1990823248485916672/M9Wa3vRt_400x400.jpg",
-      "socials": {
-        "x": "https://x.com/iPeriBS"
-      }
-    },
-    {
-      "id": "kikobs3",
-      "name": "Kikobs3",
-      "role": "Staff",
-      "image": "https://pbs.twimg.com/profile_images/1607805282222047232/mxJu4ctm_400x400.jpg",
-      "socials": {
-        "x": "https://x.com/Kikobs3"
-      }
     }
   ]
 }

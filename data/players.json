@@ -29,6 +29,15 @@
         "youtube": "https://www.youtube.com/@CauebrBs",
         "tiktok": "https://www.tiktok.com/@cauebr_bs"
       }
+    },
+    {
+      "id": "AlchemicalX_BS",
+      "name": "AlchemicalX",
+      "role": "Coach",
+      "image": "https://pbs.twimg.com/profile_images/1836174329970610176/zFf8YQBh_400x400.jpg",
+      "socials": {
+        "x": "https://x.com/AlchemicalX_BS"
+      }
     }
   ]
 }

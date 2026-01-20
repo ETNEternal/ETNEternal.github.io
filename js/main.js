@@ -143,7 +143,7 @@ window.addEventListener("load", () => {
   // Render announcements on home page
   const announcementsGrid = document.getElementById("announcements-grid");
   const otherAnnouncementsGrid = document.getElementById(
-    "other-announcements-grid"
+    "other-announcements-grid",
   );
   const shopGrid = document.getElementById("shop-grid");
 
@@ -188,38 +188,40 @@ window.addEventListener("load", () => {
     };
 
     const renderJerseyFeature = (items) => {
-      const jersey = items.find(
-        (item) => normalizeType(item.type) === "jersey"
-      );
+      const featured = items.find((item) => item.featured === true);
 
-      if (!jersey) {
+      if (!featured) {
         announcementsGrid.innerHTML =
-          '<p class="announcement-empty">Jersey coming soon.</p>';
+          '<p class="announcement-empty">Featured announcement coming soon.</p>';
         return;
       }
 
       announcementsGrid.classList.add("jersey-only");
 
-      const displayDate = formatDate(jersey.date);
+      const displayDate = formatDate(featured.date);
+      const itemType = normalizeType(featured.type);
+      const badgeClass = `badge-${itemType}`;
+      const ctaText =
+        itemType === "jersey" ? "Shop the drop →" : "Learn more →";
 
       announcementsGrid.innerHTML = `
         <article class="jersey-feature" tabindex="0">
           <a href="${
-            jersey.link
+            featured.link
           }" target="_blank" rel="noopener noreferrer" class="jersey-link" aria-label="${
-        jersey.title
-      }">
+            featured.title
+          }">
             <div class="jersey-media">
-          ${pictureHtml(jersey.image, jersey.title, "jersey-image")}
+          ${pictureHtml(featured.image, featured.title, "jersey-image")}
             </div>
             <div class="jersey-content">
-              <span class="badge badge-jersey">${jersey.type || "Jersey"}</span>
-              <h3 class="jersey-title">${jersey.title}</h3>
+              <span class="badge ${badgeClass}">${featured.type || "Featured"}</span>
+              <h3 class="jersey-title">${featured.title}</h3>
               <time class="jersey-date" datetime="${
-                jersey.date || ""
+                featured.date || ""
               }">${displayDate}</time>
-              <p class="jersey-summary">${jersey.summary || ""}</p>
-              <span class="jersey-cta">Shop the drop →</span>
+              <p class="jersey-summary">${featured.summary || ""}</p>
+              <span class="jersey-cta">${ctaText}</span>
             </div>
           </a>
         </article>
@@ -238,9 +240,7 @@ window.addEventListener("load", () => {
     const renderOtherAnnouncements = (items) => {
       if (!otherAnnouncementsGrid) return;
 
-      const filtered = items.filter(
-        (item) => normalizeType(item.type) !== "jersey"
-      );
+      const filtered = items.filter((item) => item.featured !== true);
 
       if (!filtered.length) {
         otherAnnouncementsGrid.innerHTML =
@@ -261,13 +261,13 @@ window.addEventListener("load", () => {
               <a href="${
                 item.link
               }" target="_blank" rel="noopener noreferrer" class="announcement-link" aria-label="${
-            item.title
-          }">
+                item.title
+              }">
                 ${pictureHtml(item.image, item.title, "announcement-image")}
                 <div class="announcement-content">
                   <span class="badge ${badgeClass}">${
-            item.type || "General"
-          }</span>
+                    item.type || "General"
+                  }</span>
                   <h3 class="announcement-title">${item.title}</h3>
                   <time class="announcement-date" datetime="${
                     item.date || ""
@@ -295,7 +295,7 @@ window.addEventListener("load", () => {
       .then((res) => res.json())
       .then((items) => {
         const sorted = items.sort(
-          (a, b) => new Date(b.date) - new Date(a.date)
+          (a, b) => new Date(b.date) - new Date(a.date),
         );
 
         if (announcementsGrid) {
@@ -341,13 +341,13 @@ window.addEventListener("load", () => {
               <a href="${
                 item.link
               }" target="_blank" rel="noopener noreferrer" class="announcement-link" aria-label="${
-            item.title
-          }">
+                item.title
+              }">
                 ${pictureHtml(item.image, item.title, "announcement-image")}
                 <div class="announcement-content">
                   <span class="badge ${badgeClass}">${
-            item.type || "Product"
-          }</span>
+                    item.type || "Product"
+                  }</span>
                   <h3 class="announcement-title">${item.title}</h3>
                   ${priceLine}
                   <p class="announcement-summary">${item.summary || ""}</p>

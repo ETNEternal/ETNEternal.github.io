@@ -85,7 +85,9 @@ img {
   text-decoration: none;
   color: white;
   margin: 0;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
   position: relative;
   white-space: nowrap;
 }
@@ -146,7 +148,9 @@ img {
   font-family: "Amaranth", sans-serif;
   font-size: 16px;
   font-weight: 600;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 .dropdown-item i {
   font-size: 18px;
@@ -176,7 +180,9 @@ img {
   background-color: #262626;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, background-color 0.5s ease-in-out,
+  transition:
+    transform 0.3s ease-in-out,
+    background-color 0.5s ease-in-out,
     color 0.5s ease-in-out;
 }
 
@@ -466,7 +472,11 @@ img {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 .announcement-card:hover {
   transform: translateY(-4px);
@@ -475,7 +485,9 @@ img {
 .announcement-link {
   color: inherit;
   text-decoration: none;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .announcement-image {
   width: 100%;
@@ -493,6 +505,7 @@ img {
   border-radius: 999px;
   font-size: 12px;
   text-transform: uppercase;
+  text-align: left;
   letter-spacing: 0.5px;
   background: #343434;
   color: #fff;
@@ -507,8 +520,8 @@ img {
 .badge-roster {
   background: #ff6a00;
 }
-.badge-creator {
-  background: #0066ff;
+.badge-news {
+  background: #fd1910;
 }
 .badge-tournament {
   background: #008a3d;
@@ -547,7 +560,9 @@ img {
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 .jersey-feature:hover {
   transform: translateY(-6px);

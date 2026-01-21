@@ -2,9 +2,9 @@
     "id": "roster-brawl-stars-2026",
     "type": "Roster",
     "title": "Brawl Stars 2026 roster",
-    "date": "2026-01-17",
+    "date": "2026-01-18",
     "image": "https://pbs.twimg.com/media/G-4LTAeX0AAO0RU?format=jpg&name=large",
-    "link": "players-creators.html",
+    "link": "https://youtu.be/ewe5GaWHERw?si=IbE-FDRv4JV_Q4Ij",
     "summary": "Meet the squad competing this season.",
     "featured": true
   },
@@ -12,7 +12,7 @@
     "id": "jersey-2026-drop",
     "type": "Jersey",
     "title": "2026 Eternal Jersey Drop",
-    "date": "2026-01-01",
+    "date": "2026-01-17",
     "image": "images/ETN_jersey.png",
     "link": "https://eternal-10105.myshopify.com/",
     "summary": "Our new jerseys are live. Limited quantities."
@@ -20,18 +20,18 @@
   {
     "id": "creator-electro-joins",
     "type": "Creator",
-    "title": "Electro joins as Content Director",
-    "date": "2025-08-15",
+    "title": "New logo",
+    "date": "2026-01-16",
     "image": "images/etn-logo-transparent.png",
-    "link": "people/electro.html",
-    "summary": "Elevating our content game with new leadership."
+    "link": "https://x.com/etn_eternal/status/2011845658861330532?s=20",
+    "summary": "New logo, Same Eternal"
   },
   {
     "id": "tournament-weekly-series",
     "type": "Tournament",
     "title": "Matcherino tournament this week",
-    "date": "2025-10-01",
-    "image": "images/etn-logo-transparent.png",
+    "date": "2026-01-25",
+    "image": "https://matcherino.com/_next/image?url=https%3A%2F%2Fcdn.matcherino.com%2F618c7aa6-87fb-461a-a494-de8ab0aa74ba%2F-%2Fcrop%2F1912x1077%2F3%2C0%2F-%2Fresize%2F800x450%2F&w=1920&q=75",
     "link": "https://matcherino.com/supercell/tournaments/180014/overview",
     "summary": "Sign up now by clicking on the image above."
   }

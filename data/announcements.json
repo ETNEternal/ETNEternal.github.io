@@ -1,11 +1,11 @@
 [  {
     "id": "roster-brawl-stars-2026",
     "type": "Roster",
-    "title": "Roster Update",
-    "date": "2026-01-18",
-    "image": "https://pbs.twimg.com/media/HARBR1sWwAAQTXV?format=jpg&name=large",
-    "link": "https://x.com/etn_eternal/status/2018810361181544797?s=20",
-    "summary": "Meet our new replacement, Mohtep",
+    "title": "Monthly Qualifiers result",
+    "date": "2026-02-09",
+    "image": "https://pbs.twimg.com/media/HAqbHrNXgAAK7N3?format=jpg&name=large",
+    "link": "https://x.com/etn_eternal/status/2020597943703933324",
+    "summary": "We have qualified to the monthly finals",
     "featured": true
   },
   {
@@ -19,12 +19,12 @@
   },
   {
     "id": "creator-electro-joins",
-    "type": "News",
-    "title": "New logo",
+    "type": "Roster",
+    "title": "New player",
     "date": "2026-01-16",
-    "image": "images/etn-logo-transparent.png",
-    "link": "https://x.com/etn_eternal/status/2011845658861330532?s=20",
-    "summary": "New logo, Same Eternal"
+    "image": "https://pbs.twimg.com/media/HARBR1sWwAAQTXV?format=jpg&name=small",
+    "link": "https://x.com/etn_eternal/status/2018810361181544797?s=20",
+    "summary": "Meet our new player, Mohtep"
   },
   {
     "id": "tournament-weekly-series",
